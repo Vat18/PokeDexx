@@ -1,0 +1,61 @@
+
+
+.sheet {
+    height: 50vh
+}
+.sheet_img {
+    margin-top: 30px;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+}
+.pokemon_info{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    h3{
+        font-size: 20px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #6B727A;
+    }
+    .poke_status {
+        text-transform: capitalize;
+    }
+    .habilidades {
+        padding: 0 10px;
+        width: 200px;
+      }
+  
+}
+
+.sheet_tab {   
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.sheet_item {   
+    display: flex;
+    flex-direction: column;
+    .div {
+        margin-top: 20px
+    }
+}
+
+.sheet_progress {
+    display: flex;
+    .div {
+        margin-top: 20px
+    }
+}
+
+.sheet_item_label {
+    margin-right: 20px;
+    font-weight: bold;
+}
+    

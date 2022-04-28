@@ -1,0 +1,22 @@
+<div class="sheet_img">
+    <img [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' + leadingZeros(pokemon.id)  + '.png'" />
+</div>
+<div class="pokemon_info">
+    <div class="status">
+      <h3>Status</h3>
+      <ul>
+        <li class="poke_status" *ngFor="let value of pokemon.stats">
+          {{ value.stat.name }} : {{ value.base_stat }}
+        </li>
+      </ul>
+    </div>
+    <div class="habilidades">
+      <h3>Abilities</h3>
+      <ul>
+        <li class="poke_status" *ngFor="let value of pokemon.abilities">
+          {{ value.ability.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
