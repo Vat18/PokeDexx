@@ -20,7 +20,6 @@ export class PokemonListComponent implements OnInit {
 
   private offset: number;
   isLoading = false;
-  isLastPage = false;
 
   searchPokemon: any;
   totalPokemonCount = 0;
@@ -46,14 +45,9 @@ export class PokemonListComponent implements OnInit {
       this.pokemonService.getPokemonList(offset * limit, limit)
       .subscribe((list: any) => {
         this.tableDataCount = list?.count;
-      
-
-        if (!this.isLastPage) {
-          this.getPokemon(list);
-        }
-      });
-  
-  }
+        this.getPokemon(list);
+       });
+   }
 
   onSearchPokemon(): void {
     let value = this.search.value;
