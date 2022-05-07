@@ -19,7 +19,7 @@ export class PokemonListComponent implements OnInit {
   pageSizeOptions: [10, 20, 50];
 
   private offset: number;
-  isLoading: boolean;
+  isLoading = false;
   isLastPage = false;
 
   searchPokemon: any;
@@ -41,20 +41,18 @@ export class PokemonListComponent implements OnInit {
   }
 
   getPage(offset: number, limit: number): any {
-    if (!this.isLoading && !this.isLastPage) {
+   
       this.isLoading = true;
       this.pokemonService.getPokemonList(offset * limit, limit)
       .subscribe((list: any) => {
         this.tableDataCount = list?.count;
-        if (list.length === 0) {
-          this.isLastPage = true;
-        }
+      
 
         if (!this.isLastPage) {
           this.getPokemon(list);
         }
       });
-    }
+  
   }
 
   onSearchPokemon(): void {
