@@ -18,9 +18,9 @@ export class PokemonDetailComponent implements OnInit {
   }
 
 
-  getAbilities(): string {
-    return this.pokemon.abilities.map(x => x.ability.name).join(', ');
-  }
+//   getAbilities(): string {
+//     return this.pokemon.abilities.map(x => x.ability.name).join(', ');
+//   }
   leadingZeros(str: string | number, size = 3): string {
     let s = String(str);
     while (s.length < (size || 2)) {
@@ -29,8 +29,8 @@ export class PokemonDetailComponent implements OnInit {
     return s;
   }
 
-  getPrincipalType(list: any[]): any {
-    return list.filter(x => x.slot === 1)[0]?.type.name;
-  }
+//   getPrincipalType(list: any[]): any {
+//     return list.filter(x => x.slot === 1)[0]?.type.name;
+//   }
 
 }
